@@ -1,8 +1,4 @@
-package boj;
-
 import java.util.*;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
 import java.io.*;
 
 public class FindPassword_17219 {
@@ -36,5 +32,4 @@ public class FindPassword_17219 {
 		bw.flush();
 		bw.close();
 	}
-
 }
