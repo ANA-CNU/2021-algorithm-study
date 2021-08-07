@@ -11,7 +11,8 @@ input = Number(input[0]);
 
 // 문제 풀이
 function solution(input) {
-    
+    if (!input || input === 1) return 1;
+    return input * solution(input - 1);
 }
 
 // 제출
