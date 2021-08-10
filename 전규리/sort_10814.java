@@ -1,5 +1,3 @@
-package boj;
-
 import java.util.*;
 import java.io.*;
 
@@ -33,39 +31,11 @@ public class sort_10814 {
 			}
 			
 		});
-		
-//		sort(arr, 0, len);
+	
 		for (int i = 0; i < len; i++) {
 			bw.write(arr[i][0] + " " + arr[i][1] + "\n");
 		}
 		bw.flush();
 		bw.close();
 	}
-	
-//	public static void sort(String[][] arr, int l, int r) {
-//		int pivot = l;
-//		int j = pivot;
-//		int i = l+1;
-//		String temp[];
-//		
-//		if (l < r) {
-//			for (; i <= r; i++) {
-//				if (Integer.parseInt(arr[i][0]) < Integer.parseInt(arr[pivot][0])) {
-//					j++;
-//					temp = arr[j];
-//					arr[j] = arr[i];
-//					arr[i] = temp;
-//				}
-//			}
-//			temp = arr[l];
-//			arr[l] = arr[j];
-//			arr[j] = temp;
-//			
-//			pivot = j;
-//			
-//			sort(arr, l, pivot-1);
-//			sort(arr, pivot+1, r);
-//		}
-//	}
-
 }
