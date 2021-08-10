@@ -16,6 +16,7 @@ function solution(input) {
     const M = Number(m);
     let result = '';
     const output = [];
+    const visited = new Array(N).fill(false);
 
     function dfs(count, start) {
         if (count === M) {
@@ -24,9 +25,12 @@ function solution(input) {
         }
 
         for (let i = start; i < N; i++) {
+            if (visited[i]) continue;
+            visited[i] = true;
             output.push(i + 1);
             dfs(count + 1, i);
             output.pop();
+            visited[i] = false;
         }
     }
 

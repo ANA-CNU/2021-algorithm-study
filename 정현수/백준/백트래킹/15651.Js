@@ -17,20 +17,20 @@ function solution(input) {
     let result = '';
     const output = [];
 
-    function dfs(count, start) {
+    function dfs(count) {
         if (count === M) {
             result += `${output.join(' ')}\n`;
             return;
         }
 
-        for (let i = start; i < N; i++) {
+        for (let i = 0; i < N; i++) {
             output.push(i + 1);
-            dfs(count + 1, i);
+            dfs(count + 1);
             output.pop();
         }
     }
 
-    dfs(0, 0);
+    dfs(0);
     return result;
 }
 
