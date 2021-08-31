@@ -1,0 +1,28 @@
+def cut(a, k, s):
+    if k == 1 and s[0][0] == a:
+        return 1
+    elif k == 1 or k == 0:
+        return 0
+
+    state = True
+    cover = [a for _ in range(k)]
+    for i in s:
+        if cover != i:
+            state = False
+
+    if state:
+        return 1
+    else:
+        k = int(k * (1 / 2))
+        sq1 = [s[i][0:k] for i in range(k)]
+        sq2 = [s[i][0:k] for i in range(k, k+k)]
+        sq3 = [s[i][k:k+k] for i in range(k)]
+        sq4 = [s[i][k:k+k] for i in range(k, k+k)]
+        return cut(a, k, sq1) + cut(a, k, sq2) + cut(a, k, sq3) + cut(a, k, sq4)
+
+
+n = int(input())
+square = [list(map(int, input().split())) for _ in range(n)]
+print(cut(0, n, square))
+print(cut(1, n, square))
+
