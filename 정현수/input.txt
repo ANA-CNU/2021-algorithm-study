@@ -1,16 +1,7 @@
-15
-push 1
-push 2
-front
-back
-size
-empty
-pop
-pop
-pop
-size
-empty
-pop
-push 3
-empty
-front
+5
+ABC*+DE/-
+1
+2
+3
+4
+5
