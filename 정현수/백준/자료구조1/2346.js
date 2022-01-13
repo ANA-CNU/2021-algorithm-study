@@ -1,3 +1,5 @@
+// 문제가 해결이 안됩니다...
+
 const path = process.platform === "linux" ? "/dev/stdin" : "input.txt"; // 리눅스로 테스트할 땐 따로 설정해주어야 합니다.
 const input = require("fs").readFileSync(path).toString().trim().split("\n");
 
@@ -7,9 +9,9 @@ testcases = testcases[0].split(' ').map(i => Number(i));
 
 // 문제 풀이
 function solution(n, testcases) {
-	const answer = [1];
+	const answer = '';
 	let balloons = testcases.map((item, index) => {
-		return {item, index: index + 1}
+		return {item, index: index + 1};
 	});;
 	let index = 0;
 	let paper = balloons[0].item - 1;
@@ -22,11 +24,11 @@ function solution(n, testcases) {
 			index = balloons.length - Math.abs(index + paper);
 		}
 		paper = balloons[index].item;
-		answer.push(balloons[index].index);
+		answer += `${balloons[index].index} `;
 		balloons.splice(index, 1);
 	}
 
-	return answer.join(' ');
+	return answer.trim('');
 }
 
 // 제출
