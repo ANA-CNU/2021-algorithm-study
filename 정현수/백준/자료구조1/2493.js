@@ -15,13 +15,18 @@ function solution(n, strings) {
 			item: Number(split[i]),
 		};
 		
+		// 스택에 아무것도 없을 때(처음 시작)에는 스택에 넣어주고 정답에 0을 넣어준다.
 		if (stack.length === 0) {
 			stack.push(current);
 			answer.push(0);
 			continue;
 		}
 		
+		// 현재의 값이 스택의 TOP의 Item이 클 경우에
 		if (stack[stack.length - 1].item < current.item) {
+			// 스택이 빌 때 까지 반복문을 돈다.
+			// 스택의 TOP이 현재의 값보다 같거나 클 경우 break로 빠져나온다. (레이저 신호를 수신)
+			// 아닐 경우에는 계속 stack을 pop한다.
 			while (stack.length) {
 				if (stack[stack.length - 1].item >= current.item) {
 					break;
@@ -29,19 +34,11 @@ function solution(n, strings) {
 					stack.pop();
 				}
 			}
-			if (!stack.length) {
-				answer.push(0);
-			} else {
-				answer.push(stack[stack.length - 1].index);
-			}
-			stack.push(current);
-		} else {
-			if (!stack.length) {
-				answer.push(0);
-			} else {
-				answer.push(stack[stack.length - 1].index);
-			}
-			stack.push(current);
+			answer.push(!stack.length ? 0 : stack[stack.length - 1].index); // 정답 배열에는 스택의 길이에 따라 답을 넣어준다. (0 or stack의 TOP)
+			stack.push(current); // 스택에는 현재 값을 넣어준다.
+		} else { // 현재의 값이 스택의 TOP의 Item이 작을 경우에
+			answer.push(!stack.length ? 0 : stack[stack.length - 1].index); // 정답 배열에는 스택의 길이에 따라 답을 넣어준다. (0 or stack의 TOP)
+			stack.push(current); // 스택에는 현재 값을 넣어준다.
 		}
 	}
 
