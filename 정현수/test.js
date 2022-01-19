@@ -76,3 +76,14 @@ for (let i = 0; i < iter; i += 1) {
 end = new Date();
 
 console.log(`stack pop ${iter}: ${end - start}ms`);
+
+
+function App() {
+	return (
+		<h1>Hello, GodDaeHee!</h1>
+	);
+} 
+
+function App() {
+	return React.createElement("h1", null, "Hello, GodDaeHee!");
+}
