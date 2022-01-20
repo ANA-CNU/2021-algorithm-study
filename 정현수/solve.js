@@ -1,31 +1,55 @@
-const readline = require('readline');
+const path = process.platform === "linux" ? "/dev/stdin" : "input.txt"; // 리눅스로 테스트할 땐 따로 설정해주어야 합니다.
+const input = require("fs").readFileSync(path).toString().trim().split("\n");
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+let [n, ...loss] = input;
+n = +n;
+loss = loss[0].split(' ').map(i => Number(i));
 
-let input = [];
+// 문제 풀이
+function solution(n, loss) {
+	let answer = 0;
+	loss.sort((a, b) => a - b);
 
-rl.on('line', function (line) {
-  input.push(line)
-})
-  .on('close', function () {
-		//////////////////////////////////////
-		const [n, ...prices] = input;
+	if (loss.length % 2 === 1) {
+		answer = loss.pop();
+		n -= 1;
+	}
 
-		function solution(n, prices) {
-			let answer = 0;
-			const sorted = prices.map(i => Number(i)).sort((a, b) => b - a);
-			for (let i = 0; i < n; i += 1) {
-				if ((i + 1) % 3 === 0) continue;
-				answer += sorted[i];
-			}
-			return answer;
-		}
-		
-		const answer = solution(n, prices);
-		console.log(answer);
-		//////////////////////////////////////
-  process.exit();
-});
+	for (let i = 0; i < n / 2; i += 1) {
+		answer = Math.max(loss[i] + loss[loss.length - 1 - i], answer);
+	}
+
+	return answer;
+}
+
+// 제출
+const answer = solution(n, loss);
+console.log(String(BigInt(answer)));
+
+// // 문제 풀이
+// function solution(n, loss) {
+// 	let answer = 0;
+
+// 	for (let i = 0; i < loss.length - 1; i += 1) {
+// 		for (let j = 0; j < loss.length - i; j += 1) {
+// 			if (loss[j] > loss[j + 1]) {
+// 				const a = loss[j];
+// 				loss[j] = loss[j + 1];
+// 				loss[j + 1] = a;
+// 			}
+// 		}
+// 	}
+
+// 	if (loss.length % 2 === 1) {
+// 		answer = loss.pop();
+// 		n -= 1;
+// 	}
+
+// 	for (let i = 0; i < n / 2; i += 1) {
+// 		const sum = loss[i] + loss[loss.length - 1 - i];
+// 		answer = sum > answer ? sum : answer;
+// 	}
+
+// 	return answer;
+// }
+
