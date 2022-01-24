@@ -1,82 +1,25 @@
 const path = process.platform === "linux" ? "/dev/stdin" : "input.txt"; // 리눅스로 테스트할 땐 따로 설정해주어야 합니다.
 const input = require("fs").readFileSync(path).toString().trim().split("\n");
 
-const string = input[0];
+let [n, number] = input;
+n = +n;
+number = number.split(' ').map(i => +i);
 
 // 문제 풀이:
-function solution(string) {
-	const splited = string.split('');
-	const maximum = findMaximum(splited);
-	const minimum = findMinimum(splited);
-	console.log(maximum);
-	console.log(minimum);
-}
+function solution(n, number) {
+	const max = Math.max(...number);
+	let answer = [];
 
-function findMaximum(string) {
-	let stack = [];
-	let number = '';
-
-	for (let i = 0; i < string.length; i += 1) {
-		const item = string[i];
-
-		if (item === 'M') {
-			stack.push(item);
-			continue;
-		}
-
-		if (item === 'K') {
-			// const pushItme = stack.length ? String(5 * (10 ** stack.length)) : 5;
-			if (stack.length) {
-				number += '5';
-				for (let i = 0; i < stack.length; i += 1) {
-					number += '0';
-				}
-			} else {
-				number += '5';
-			}
-			stack = [];
+	for (let i = 1; i <= max; i++) {
+		for (let j = 0; j < n; j++) {
+			if (number[j] % i != 0) j = n;
+			if (j == n - 1) answer.push(i + "\n");
 		}
 	}
 
-	if (stack.length) stack.forEach(_ => number += '1');
-	return number;
-}
-
-function findMinimum(string) {
-	let stack = [];
-	let number = '';
-
-	for (let i = 0; i < string.length; i += 1) {
-		const item = string[i];
-
-		if (item === 'M') {
-			stack.push(item);
-			continue;
-		}
-
-		if (item === 'K') {
-			if (!stack.length) {
-				number += '5';
-			} else {
-				number += '1';
-				for (let i = 0; i < stack.length - 1; i += 1) {
-					number += '0';
-				}
-				// number += (String(10 ** (stack.length - 1)));
-				number += '5';
-				stack = [];
-			}
-		}
-	}
-
-	if (stack.length) {
-		number += '1';
-		for (let i = 0; i < stack.length - 1; i += 1) {
-			number += '0';
-		}
-	}
-	return number;
+	return answer.join('').trim();
 }
 
 // 제출
-solution(string);
+const answer = solution(n, number);
+console.log(answer);
