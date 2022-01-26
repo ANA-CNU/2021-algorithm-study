@@ -27,11 +27,6 @@ function solution(n, crane, m, box) {
 			}
 		}
 		answer += 1;
-
-		if (crane[n - 1] >= box[0]) {
-			answer += Math.ceil(box.length / n);
-			return answer;
-		}
 	}
 
 	return answer;
