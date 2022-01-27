@@ -15,25 +15,22 @@ function solution(n, crane, m, box) {
 	let answer = 0;
 
 	// 불가능 할 때 
-	if (Math.max(...box) > crane[0]) return -1;
+	if (box[0] > crane[0]) return -1;
 
 	while (box.length) {
+		let count = 0;
+
 		for (let i = 0; i < n; i += 1) {
-			for (let j = 0; j < m; j += 1) {
-				if (crane[i] >= box[j]) {
-					box.splice(j, 1);
-					break;
-				}
+			if (count === box.length) {
+				break;
+			} else if (crane[i] >= box[count]) {
+				box.splice(count, 1);
+			} else {
+				count += 1;
 			}
 		}
 		answer += 1;
-
-		if (crane[n - 1] >= box[0]) {
-			answer += Math.ceil(box.length / n);
-			return answer;
-		}
 	}
-
 	return answer;
 }
 
