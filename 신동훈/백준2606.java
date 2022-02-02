@@ -64,12 +64,10 @@ public class 백준2606 {
 
 class Network {
     private ArrayList<Computer> network;
-    private boolean[] isInfected;
 
     //== 생성자 ==//
     private Network(ArrayList<Computer> network) {
         this.network = network;
-        isInfected = new boolean[network.size()];
     }
 
     //== 정적 팩터리 메서드 ==//
@@ -84,10 +82,10 @@ class Network {
 
         computerDeque.add(network.get(startComputerNumber));
 
-        isInfected[startComputerNumber] = true;
 
         while (!computerDeque.isEmpty()) {
             Computer currentComputer = computerDeque.poll();
+            currentComputer.infect();
 
             IntStream.range(0, currentComputer.getLinkedComputer().size())
                     .forEach(i -> checkAndInfect(computerDeque, currentComputer.getLinkedComputer().get(i)));
@@ -95,8 +93,8 @@ class Network {
     }
 
     private void checkAndInfect(Deque<Computer> computerDeque, Computer computer) {
-        if (!isInfected[computer.getNumber()]) {
-            isInfected[computer.getNumber()] = true;
+        if (!computer.isInfected()) {
+            computer.infect();
             computerDeque.add(computer);
         }
     }
@@ -105,8 +103,8 @@ class Network {
     //== 감염된 컴퓨터 개수 구하기 ==//
     public int getInfectedComputerCount() {
         int result = 0;
-        for (boolean isInfected : isInfected) {
-            if (isInfected) result++;
+        for (Computer computer : network) {
+            if(computer.isInfected()) result ++;
         }
         return result;
     }
@@ -118,6 +116,7 @@ class Network {
 class Computer {
     private int number;
     private List<Computer> linkedComputer;
+    private boolean isInfected = false;
 
 
     //== 생성자 ==//
@@ -155,5 +154,13 @@ class Computer {
 
     public List<Computer> getLinkedComputer() {
         return linkedComputer;
+    }
+
+    public boolean isInfected() {
+        return isInfected;
+    }
+
+    public void infect() {
+        isInfected = true;
     }
 }
