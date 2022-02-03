@@ -3,22 +3,10 @@ const [n] = require("fs")
   .readFileSync(path)
   .toString()
   .trim()
-  .split("\n")
-  .map(Number);
+  .split("\n");
 
 function solution(n) {
-  const memo = new Array(n + 1).fill(0);
-  memo[1] = 1;
-
-  for (let i = 2; i <= n; i += 1) {
-    let min = 4;
-    for (let j = 1; j * j <= i; j += 1) {
-      min = Math.min(min, memo[i - j * j]);
-    }
-    memo[i] = min + 1;
-  }
-  
-  return memo[n];
+  return n % 2 === 0 ? 'CY' : 'SK';
 }
 
 const answer = solution(n);
