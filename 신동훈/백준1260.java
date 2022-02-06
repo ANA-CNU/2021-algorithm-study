@@ -23,7 +23,6 @@ public class 백준1260 {
 
 
 
-
         int[] inputs = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         final int POINT_COUNT = inputs[0]; //정점의 개수
         final int LINE_COUNT = inputs[1]; //간선의 개수
