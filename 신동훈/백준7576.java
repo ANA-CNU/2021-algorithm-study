@@ -1,4 +1,6 @@
-package 단계별로_풀어보기.bfs와dfs;
+import annotation.BOJ;
+import annotation.BaekjoonTier;
+import annotation.SolveDate;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +9,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+@BOJ(   number = 7576,
+        tier = BaekjoonTier.GOLD_V,
+        solveDate = @SolveDate(year = 2022, month = 2, day = 6))
 public class 백준7576 {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

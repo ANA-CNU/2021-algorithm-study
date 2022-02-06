@@ -1,4 +1,4 @@
-package 단계별로_풀어보기.bfs와dfs;
+import annotation.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,11 @@ import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.IntStream;
 
-public class Q1260 {
+
+@BOJ(   number = 1260,
+        tier = BaekjoonTier.SILVER_II,
+        solveDate = @SolveDate(year = 2022, month = 2, day = 2))
+public class 백준1260 {
 
     /*
      * 첫째 줄에 정점의 개수 N, 간선의 개수 M, 탐색을 시작할 정점의 번호 V

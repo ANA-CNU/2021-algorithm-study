@@ -1,4 +1,4 @@
-package 단계별로_풀어보기.bfs와dfs;
+import annotation.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,8 +6,10 @@ import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.IntStream;
 
+@BOJ(   number = 1012,
+        tier = BaekjoonTier.SILVER_II,
+        solveDate = @SolveDate(year = 2022, month = 2, day = 5))
 public class 백준1012 {
-
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

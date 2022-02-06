@@ -1,5 +1,3 @@
-package 백준;
-
 import java.io.*;
 import java.util.Stack;
 
