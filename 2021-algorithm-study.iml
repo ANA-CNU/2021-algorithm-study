@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/김수빈" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/문다연" isTestSource="false" packagePrefix="BOJ" />
+      <sourceFolder url="file://$MODULE_DIR$/서원준" isTestSource="false" packagePrefix="beakjoon" />
+      <sourceFolder url="file://$MODULE_DIR$/신동훈" isTestSource="false" packagePrefix="단계별로_풀어보기.bfs와dfs" />
+      <sourceFolder url="file://$MODULE_DIR$/안우진" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/이다은" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/이수민" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/장서혁" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/전규리" isTestSource="false" packagePrefix="boj" />
+      <sourceFolder url="file://$MODULE_DIR$/정계영" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/최병욱" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/최시은" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
