@@ -1,16 +1,17 @@
 package 단계별로_풀어보기.bfs와dfs;
 
-import gitrepourlparser.AnAGitRepositoryUrlParser;
+
+import gitrepourlparser.AbsolutePathBeforePackageNameParser;
 import readmegenerator.BOJReadmeGenerator;
 
 public class RMGenerator {
     public static void main(String[] args) {
         //== ANA 하루하나 알고리즘 리드미 만드는 코드 ==//
-        AnAGitRepositoryUrlParser anaParser = new AnAGitRepositoryUrlParser();
+        AbsolutePathBeforePackageNameParser parser = new AbsolutePathBeforePackageNameParser();
 
-        anaParser.setUsername("신동훈");//자기이름 입력
+        parser.setAbsolutePathBeforePackageName("https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈");
 
-        BOJReadmeGenerator rg = new BOJReadmeGenerator(anaParser);
+        BOJReadmeGenerator rg = new BOJReadmeGenerator(parser);
 
         rg.setTitle("동훈이의 하루하나 알고리즘");//안해줄 경우 기본값인 "백준" 사용
 

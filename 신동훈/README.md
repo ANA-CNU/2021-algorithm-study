@@ -1,7 +1,7 @@
 
 ## 동훈이의 하루하나 알고리즘
 |날짜|번호|제목|난이도|풀이|문제 주소|
-|---|---|---|---|---|---|
+|----|---|----|----|---|----|
 |2022-02-02|1260|DFS와 BFS|<img src="https://static.solved.ac/tier_small/9.svg" width="20" height="20" /> SILVER_II|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준1260.java)|[문제 주소](https://www.acmicpc.net/problem/1260)|
 |2022-02-03|2606|바이러스|<img src="https://static.solved.ac/tier_small/8.svg" width="20" height="20" /> SILVER_III|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준2606.java)|[문제 주소](https://www.acmicpc.net/problem/2606)|
 |2022-02-04|2667|단지번호붙이기|<img src="https://static.solved.ac/tier_small/10.svg" width="20" height="20" /> SILVER_I|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준2667.java)|[문제 주소](https://www.acmicpc.net/problem/2667)|
