@@ -1,25 +1,14 @@
 const path = process.platform === "linux" ? "/dev/stdin" : "input.txt"; // 리눅스로 테스트할 땐 따로 설정해주어야 합니다.
-const [N, K] = require("fs")
+let [n, ...routes] = require("fs")
   .readFileSync(path)
   .toString()
   .trim()
-  .split("\n")[0]
-  .split(" ")
-  .map(Number);
+  .split("\n");
 
-function solution(N, K) {
-  const array = Array.from({ length: N }, (_, i) => i + 1);
-  const answer = [];
-  let count = 0;
+n = +n;
+routes = routes.map((i) => i.split(" ").map(Number));
 
-  while (array.length) {
-    count = (count + K - 1) % array.length;
-    answer.push(array[count]);
-    array.splice(count, 1);
-  }
+function solution(n, routes) {}
 
-  return `<${answer.join(", ")}>`;
-}
-
-const answer = solution(N, K);
+const answer = solution(n, routes);
 console.log(answer);
