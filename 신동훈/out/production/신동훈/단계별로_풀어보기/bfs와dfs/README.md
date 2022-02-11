@@ -1,7 +1,7 @@
 
 ## 동훈이의 하루하나 알고리즘
 |날짜|번호|제목|난이도|풀이|문제 주소|
-|---|---|---|---|---|---|
+|----|---|----|----|---|----|
 |2022-02-02|1260|DFS와 BFS|<img src="https://static.solved.ac/tier_small/9.svg" width="20" height="20" /> SILVER_II|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준1260.java)|[문제 주소](https://www.acmicpc.net/problem/1260)|
 |2022-02-03|2606|바이러스|<img src="https://static.solved.ac/tier_small/8.svg" width="20" height="20" /> SILVER_III|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준2606.java)|[문제 주소](https://www.acmicpc.net/problem/2606)|
 |2022-02-04|2667|단지번호붙이기|<img src="https://static.solved.ac/tier_small/10.svg" width="20" height="20" /> SILVER_I|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준2667.java)|[문제 주소](https://www.acmicpc.net/problem/2667)|
@@ -10,3 +10,4 @@
 |2022-02-07|2178|미로 탐색|<img src="https://static.solved.ac/tier_small/10.svg" width="20" height="20" /> SILVER_I|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준2178.java)|[문제 주소](https://www.acmicpc.net/problem/2178)|
 |2022-02-08|7569|토마토|<img src="https://static.solved.ac/tier_small/11.svg" width="20" height="20" /> GOLD_V|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준7569.java)|[문제 주소](https://www.acmicpc.net/problem/7569)|
 |2022-02-09|1697|숨바꼭질|<img src="https://static.solved.ac/tier_small/10.svg" width="20" height="20" /> SILVER_I|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준1697.java)|[문제 주소](https://www.acmicpc.net/problem/1697)|
+|2022-02-10|7562|나이트의 이동|<img src="https://static.solved.ac/tier_small/9.svg" width="20" height="20" /> SILVER_II|[풀이](https://github.com/AnA-algorithm/2021-algorithm-study/blob/main/신동훈/백준7562.java)|[문제 주소](https://www.acmicpc.net/problem/7562)|

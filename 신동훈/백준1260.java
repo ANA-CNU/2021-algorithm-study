@@ -1,4 +1,4 @@
-import annotation.*;
+import annotation.boj.BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,9 +7,7 @@ import java.util.*;
 import java.util.stream.IntStream;
 
 
-@BOJ(   number = 1260,
-        tier = BaekjoonTier.SILVER_II,
-        solveDate = @SolveDate(year = 2022, month = 2, day = 2))
+@BOJ
 public class 백준1260 {
 
     /*
