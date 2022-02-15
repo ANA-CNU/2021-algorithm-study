@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main_1543 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] document = sc.nextLine().split("");
+        String search = sc.nextLine();
+
+        int count = 0;
+
+        for (int i = 0; i < document.length - search.length() + 1; i++) {
+            String word = "";
+
+            for (int j = i; j < i + search.length(); j++) {
+                word += document[j];
+            }
+
+            if (word.equals(search)) {
+                count++;
+                for (int j = i; j < i + search.length(); j++) {
+                    document[j] = "";
+                }
+            }
+        }
+
+        System.out.println(count);
+
+    }
+}
