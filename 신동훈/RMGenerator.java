@@ -12,6 +12,7 @@ public class RMGenerator {
 
         rg.setTitle("동훈이의 하루하나 알고리즘");//안해줄 경우 기본값인 "백준" 사용
 
+
         rg.generate();
     }
 }
